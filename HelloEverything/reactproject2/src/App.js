@@ -13,6 +13,7 @@ import TodoForm from './conponents/TodoForm';
 import CardInfo from './conponents/CardInfo';
 import bootstrap from 'bootstrap/scss/bootstrap.scss'
 import bohancook from './Capture4.PNG';
+import Father from '../../reactproject2/src/conponents/Father';
 
 function onChange(date, dateString) {
   console.log(date, dateString);
@@ -131,7 +132,8 @@ function App() {
 
   return (
     <div className="App">
-      <div className='row'>
+      <Father></Father>
+      {/* <div className='row'>
         <div className='col-md-3'>
           <CardInfo imgSource={bohancook}></CardInfo>
         </div>
@@ -144,7 +146,7 @@ function App() {
         <div className='col-md-3'>
           <CardInfo></CardInfo>
         </div>
-      </div>
+      </div> */}
       {/* <TodoForm onSubmit={handleSubmit}/>
         <TodoList todos={todoList} onTodoClick={handleTodoClick}/>
         <Table
