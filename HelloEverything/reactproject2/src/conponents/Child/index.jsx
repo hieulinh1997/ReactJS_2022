@@ -1,21 +1,16 @@
 import React, { Component, useImperativeHandle, useRef } from "react";
 
 const Child = React.forwardRef((props, ref) => {
-    const [text, setText] = React.useState("");
+    const [text, setText] = React.useState("a");
     const [number, setNumber] = React.useState(1);
 
     const handleChange = (event) => {
-        
-        console.log("handleChange");
+        alert('handle change')
         setText(event.target.value);
     };
-
     useImperativeHandle(ref, () => (
         {
-            incrseaseNumber: () => {
-                setNumber(number + 1)
-                console.log("return text:" + number + 1);
-            } ,
+            incrseaseNumber: () => handleIncreaseNum(),
             //returnText: () => text,
 
             returnText: () => {
@@ -23,6 +18,12 @@ const Child = React.forwardRef((props, ref) => {
                 return (text)
             }
         }));
+
+    
+        const handleIncreaseNum = () => {
+            setNumber(number + 1)
+        }
+
 
     return (
         <div>

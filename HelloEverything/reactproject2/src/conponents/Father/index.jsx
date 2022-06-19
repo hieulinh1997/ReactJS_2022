@@ -7,15 +7,13 @@ class Father extends React.Component {
     }
 
     showTextInChild = () => {
-        
-        console.log("showTextInChild");
+        console.log(this.childRef.current.text);
         const txt = this.childRef.current.returnText();
         alert(txt);
     };
 
     increaseNumberInChild = () => {
         
-        console.log("increaseNumberInChild");
         this.childRef.current.incrseaseNumber();
     };
 

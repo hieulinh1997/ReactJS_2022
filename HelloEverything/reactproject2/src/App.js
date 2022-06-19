@@ -72,8 +72,8 @@ function App() {
       }
     }
 
-    fetchPostList()
-    fetchStrips(1, 10) // apply antd
+    // fetchPostList()
+    // fetchStrips(1, 10) // apply antd
   }, [filters]) // empty array chạy 1 lần thoy
 
   function handlePageChange(newPage) {
@@ -94,18 +94,18 @@ function App() {
     })
   }
 
-  const fetchStrips = (page, pageSize) => {
-    setLoading(true)
-    fetch(`https://api.instantwebtools.net/v1/passenger?page=${page}&size=${pageSize}`)
-      .then(res => {
-        res.json().then(resJson => {
-          console.log(resJson);
-          setDataSource(resJson.data)
-          setTotalPages(resJson.totalPages)
-          setLoading(false)
-        })
-      })
-  }
+  // const fetchStrips = (page, pageSize) => {
+  //   setLoading(true)
+  //   fetch(`https://api.instantwebtools.net/v1/passenger?page=${page}&size=${pageSize}`)
+  //     .then(res => {
+  //       res.json().then(resJson => {
+  //         console.log(resJson);
+  //         setDataSource(resJson.data)
+  //         setTotalPages(resJson.totalPages)
+  //         setLoading(false)
+  //       })
+  //     })
+  // }
 
   const handleTodoClick = (todo) => {
     console.log(todo);
