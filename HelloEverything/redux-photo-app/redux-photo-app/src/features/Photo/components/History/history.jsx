@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Input, Select, Space, Button, Form, Layout } from 'antd';
 import { Link, useHistory } from 'react-router-dom';
-import ClassComponent from '../../pages/ClassComponent';
+import ClassComponent from './ClassComponent';
 const { Header, Content, Footer } = Layout;
 History.propTypes = {
 
