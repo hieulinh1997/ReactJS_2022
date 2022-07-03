@@ -2,3 +2,16 @@
 	+ It uses the same ref throughout for every re-render.
 - createRef:
 	+ It creates a new ref for every re-render.
+
+- redux toolkit 
+	+ check mutate, k đc mutate trong component, selector
+	+ check can serialization
+
+- Blocking: tạm dừng Saga lại chờ cho đến khi câu lệnh đó thực thi xong rồi mới tiếp tục thực thi các Effect tiếp theo trong Saga.
+	+ call(): Gọi function. Nếu nó return về một promise, tạm dừng saga cho đến khi promise được giải quyết
+	+ take(): tạm dừng khi nhận được action
+- Non Blocking: Saga sẽ được tiếp tục ngay lập tưc sau khi yield một Effect.
+	+ fork():
+
+- effect creators:
+	+ yield(): Có nghĩa là chạy tuần tự khi nào trả ra kết quả mới thực thi tiếps
